@@ -1,0 +1,34 @@
+{
+  "name": "agfranca-blog",
+  "version": "1.0.0",
+  "description": "My personal blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreyGFranca/blog.git"
+  },
+  "author": "Andrey G. Franca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreyGFranca/blog/issues"
+  },
+  "homepage": "https://github.com/AndreyGFranca/blog#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^5.10.3",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
