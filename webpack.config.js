@@ -7,7 +7,7 @@ module.exports = {
         path: path.resolve(__dirname, "build"),
         filename: 'bundle.js'
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({template: "./index.html", filename: "index.html"})],
 
     module: {
         rules: [{
