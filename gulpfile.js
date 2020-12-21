@@ -3,8 +3,6 @@ const { series } = require('gulp');
 const markdownToJSON = require('gulp-markdown-to-json');
 const marked = require('marked');
 var jsonConcat = require('gulp-json-concat');
-var wait = require('gulp-wait')
-watch = require('gulp-watch');
 
 marked.setOptions({
   pedantic: true,
