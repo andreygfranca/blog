@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import PostFile from '../posts/build/json/posts_db.json';
+import Sidebar from './Sidebar'
 
 class Home extends React.Component {
 
@@ -11,7 +12,8 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div className="home">
+            <div className="home container">
+            <Sidebar></Sidebar>
             {
                 this.posts.map(post => {
                     return (<Post title = {post.title} author = {post.author} content = {post.body}></Post>)

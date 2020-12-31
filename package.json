@@ -27,10 +27,14 @@
     "babel-loader": "^8.2.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^5.0.1",
     "gulp-json-concat": "^0.2.0",
     "gulp-markdown-to-json": "^1.1.0",
     "html-webpack-plugin": "^4.5.0",
-    "webpack": "^5.10.3",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.11.1",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
