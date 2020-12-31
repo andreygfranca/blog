@@ -1,5 +1,15 @@
-$body-color: red;
+@import './sidebar.scss';
+@import './main.scss';
+
+////// COLORS DEFINITIONS 
+$body-color: black;
+/////////////////////////
+
+///// FONTS DEFINITIONS
+$font-stack:    Helvetica, sans-serif;
+////////////////////////
 
 body {
+  font: 100% $font-stack;
   color: $body-color;
 }
