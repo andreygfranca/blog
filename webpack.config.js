@@ -7,7 +7,7 @@ module.exports = {
         path: path.resolve(__dirname, "build"),
         filename: 'bundle.js'
     },
-    plugins: [new HtmlWebpackPlugin({template: "./index.html", filename: "index.html"})],
+    plugins: [new HtmlWebpackPlugin({ template: "./index.html", filename: "index.html" })],
 
     module: {
         rules: [{
@@ -18,11 +18,11 @@ module.exports = {
         {
             test: /\.s[ac]ss$/i,
             use: [
-              "style-loader",
-              "css-loader",
-              "sass-loader",
+                "style-loader",
+                "css-loader",
+                "sass-loader",
             ],
-          },]
+        },]
     }
 
 
