@@ -5,8 +5,8 @@ class Sidebar extends Component {
         return (
             <div className="sidebar">
                 <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
+                <a href="#">Blog</a>
+                <a href="#">Projects</a>
                 <a href="#">Contact</a>
             </div>
         );
