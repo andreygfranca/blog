@@ -4,19 +4,32 @@ import PostFile from '../posts/build/json/posts_db.json';
 
 class PostListing extends React.Component {
 
-    constructor () {
+    constructor() {
         super()
         this.posts = Object.values(PostFile)
     }
 
     render() {
         return (
-            <div >
-            {
-                this.posts.map(post => {
-                    return (<Post title = {post.title} author = {post.author} content = {post.body} url = {post.url}></Post>)
-                })
-            }
+            <div>
+                {
+                    this.posts.map(post => {
+                        return (
+                            <div style={{marginBottom: 40}}>
+                                <Post
+                                    title={post.title}
+                                    author={post.author}
+                                    content={post.body}
+                                    url={post.url}
+                                    date={post.date}
+                                    tags={post.tags}>
+                                </Post>
+
+                                <hr class="center-diamond"/>
+                            </div>
+                        )
+                    })
+                }
             </div>
         )
     }

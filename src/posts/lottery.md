@@ -1,9 +1,8 @@
 ---
 title: The Lottery Ticket
 url: the-lottery-ticket
-author: Anton C.
-date: "2013-03-15 16:00"
-template: article.jade
+author: Andrey Franca
+date: "2013-03-15"
 tags:
   - Fiction
   - Russian
