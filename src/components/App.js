@@ -13,7 +13,7 @@ class App extends Component {
                 <Navbar/>
                 <BrowserRouter>
                     <Switch>
-                        <Route path="/post/:postId">
+                        <Route path="/articles/:postId">
                             <PostView></PostView>
                         </Route>
                         <Route path="/">

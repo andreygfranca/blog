@@ -1,6 +1,5 @@
 .main {
     font-family: 'Bona Nova', serif;
-    // margin: 0 250px 0 250px; // TODO: Colocar automaticamente, atualmente esta se baseando na largua da sidebar
 }
 
 .language-java {
@@ -25,5 +24,59 @@ code {
         line-height: 1.6;
         font-size: 19px;
     }
+
+    &__date {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &__value {
+            font-size: 16px;
+            padding: 1px 8px;
+        }
+    }
+
+    &__tag {
+        display: flex;
+        flex-direction: row;
+
+        &__icon {
+            margin-right: 4px;
+            margin-left: 12px;
+        }
+    }
 }
+
+$aqua: #333;
+
+hr{
+  
+    border: 0;
+    height: 1px;
+    width: 10%;
+    position: relative;
+    margin: 30px auto;
+    
+    &.center-diamond{
+
+      background: $aqua;
+      
+      &:before{
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: $aqua;
+        display: inline-block;
+        border: 2px solid $aqua;
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        margin: 0 0 0 -3px;
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); /* IE 9 */
+        -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
+      }
+    }
+
+  }
+  
 

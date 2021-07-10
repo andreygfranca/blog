@@ -1,9 +1,8 @@
 ---
 title: Testando Aplicações Java com JUnit.
 url: testando-aplicacoes-java-com-junit
-author: Andrey G. Franca
-date: "2013-03-15 15:00"
-template: article.jade
+author: Andrey Franca
+date: "2013-03-15"
 tags:
   - tests
   - tag

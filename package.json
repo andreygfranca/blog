@@ -8,7 +8,7 @@
     "build_posts": "./node_modules/gulp/bin/gulp.js markdown && sleep 2 && ./node_modules/gulp/bin/gulp.js combine && sleep 2",
     "build": "npm run build_posts && ./node_modules/webpack/bin/webpack.js",
     "dev": "npm run build_posts && ./node_modules/webpack/bin/webpack.js --mode=development --watch",
-    "start": "npm run build_posts && ./node_modules/webpack/bin/webpack.js --mode=development serve --open"
+    "start": "npm run build && ./node_modules/webpack/bin/webpack.js --mode=development serve --open"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@primer/octicons-react": "^14.2.2",
     "gulp": "^4.0.2",
     "marked": "^1.2.7",
     "react": "^17.0.1",

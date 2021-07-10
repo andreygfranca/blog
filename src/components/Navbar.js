@@ -5,9 +5,11 @@ class Navbar extends Component {
         return (
             <div>
                 <div class="topnav">
-                    <a class="active" href="/">Blog</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
+                    <div className="topnav__content">
+                        <a href="/">Blog</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#about">About</a>
+                    </div>
                 </div>
             </div>
         );
