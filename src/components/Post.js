@@ -21,16 +21,11 @@ class Post extends React.Component {
         return (
             <Router>
                 <div className="blogs-list">
-                    <Link to={`/${this.props.url}`}>
+                    <Link to={`/post/${this.props.url}`}>
                         <Title title={this.props.title}></Title>
                     </Link>
                     <Body content={this.props.content}></Body>
                 </div>
-                <Switch>
-                    <Route path="/:postUrl">
-                    <PostView></PostView>
-                    </Route>
-                </Switch>
             </Router>
         )
     }

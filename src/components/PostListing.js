@@ -1,9 +1,8 @@
 import React from 'react';
 import Post from './Post';
 import PostFile from '../posts/build/json/posts_db.json';
-import Sidebar from './Sidebar'
 
-class Home extends React.Component {
+class PostListing extends React.Component {
 
     constructor () {
         super()
@@ -12,8 +11,7 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div className="home main">
-            <Sidebar></Sidebar>
+            <div >
             {
                 this.posts.map(post => {
                     return (<Post title = {post.title} author = {post.author} content = {post.body} url = {post.url}></Post>)
@@ -24,4 +22,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default PostListing;

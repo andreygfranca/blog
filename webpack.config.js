@@ -5,7 +5,7 @@ const dev = process.env.NODE_ENV !== 'production'
 
 module.exports = {
     devtool: dev ? 'eval-cheap-module-source-map' : 'source-map',
-    entry: './src/App.js',
+    entry: './src/Bootstrap.js',
     output: {
         path: path.resolve(__dirname, "build"),
         filename: 'bundle.js',

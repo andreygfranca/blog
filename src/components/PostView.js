@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import PostFile from '../posts/build/json/posts_db.json';
+import Title from './Title';
+import Body from './Body';
 
 class PostView extends Component {
 
@@ -6,13 +9,15 @@ class PostView extends Component {
         super(props)
         this.props = props
         this.test = 1
-        this.id = window.location.pathname.substring(1);
+        this.id = window.location.pathname.substring(6);
+        this.post = Object.values(PostFile).filter(post => post.url === this.id);
     }
 
     render() {
         return (
             <div>
-                <p>Ola mundo: {this.id}</p>
+                <Title title={this.post.map(post => post.title)}></Title>
+                <Body content={this.post.map(post => post.body)}></Body>
             </div>
         );
     }
