@@ -21,7 +21,7 @@ class Post extends React.Component {
         return (
             <Router>
                 <div className="blogs-list">
-                    <Link to={`/post/${this.props.url}`}>
+                    <Link to={`/post/${this.props.url}`} style={{ textDecoration: 'none', color: 'black' }}>
                         <Title title={this.props.title}></Title>
                     </Link>
                     <Body content={this.props.content}></Body>
