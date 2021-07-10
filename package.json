@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build_posts": "./node_modules/gulp/bin/gulp.js markdown && sleep 2 && ./node_modules/gulp/bin/gulp.js combine && sleep 2",
+    "build_posts": "./node_modules/gulp/bin/gulp.js markdown && sleep 2 && ./node_modules/gulp/bin/gulp.js combine && sleep 2 && echo '/* /index.html 200' | cat >build/_redirects ",
     "build": "npm run build_posts && ./node_modules/webpack/bin/webpack.js",
     "dev": "npm run build_posts && ./node_modules/webpack/bin/webpack.js --mode=development --watch",
     "start": "npm run build_posts && ./node_modules/webpack/bin/webpack.js --mode=development serve --open"
