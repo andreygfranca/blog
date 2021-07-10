@@ -4,7 +4,11 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-                This is the navbar
+                <div class="topnav">
+                    <a class="active" href="/">Blog</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
             </div>
         );
     }

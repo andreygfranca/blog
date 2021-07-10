@@ -1,11 +1,8 @@
 import React from 'react';
 import Body from './Body';
 import Title from './Title';
-import PostView from './PostView';
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 }
 from "react-router-dom";
@@ -20,8 +17,8 @@ class Post extends React.Component {
     render() {
         return (
             <Router>
-                <div className="blogs-list">
-                    <Link to={`/post/${this.props.url}`}>
+                <div className="post">
+                    <Link to={`/post/${this.props.url}`} style={{ textDecoration: 'none', color: 'black' }}>
                         <Title title={this.props.title}></Title>
                     </Link>
                     <Body content={this.props.content}></Body>
