@@ -10,5 +10,7 @@ lib/
 .vscode/
 .DS_Store
 node_modules/
-build
+src/posts/build
+build/bundle*
+build/index.html
 package-lock.json
