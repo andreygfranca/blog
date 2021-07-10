@@ -3,13 +3,27 @@
     // margin: 0 250px 0 250px; // TODO: Colocar automaticamente, atualmente esta se baseando na largua da sidebar
 }
 
+.language-java {
+    font-size: 14px;
+}
+
+code {
+    font-family: Consolas,"courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+    font-size: 80%;
+  }
+
 .post {
-    max-width: 720px;
+    max-width: 800px;
     margin: auto;
+
 
     &__body {
         text-align: justify;
         line-height: 1.6;
+        font-size: 19px;
     }
 }
 
