@@ -1,5 +1,6 @@
 ---
 title: Eiusmod quis non sunt nostrud reprehenderit aute quis sint amet nostrud ullamco.
+url: eiusmod-quis-non-sunt
 author: Anton C.
 date: "2013-03-15 15:00"
 template: article.jade

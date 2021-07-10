@@ -1,13 +1,19 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const dev = process.env.NODE_ENV !== 'production'
+
 module.exports = {
+    devtool: dev ? 'eval-cheap-module-source-map' : 'source-map',
     entry: './src/App.js',
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },
-    plugins: [new HtmlWebpackPlugin({ template: "./index.html", filename: "index.html" })],
+    plugins: [
+        new HtmlWebpackPlugin({ template: "./index.html", filename: "index.html" })
+    ],
 
     module: {
         rules: [{
@@ -23,7 +29,12 @@ module.exports = {
                 "sass-loader",
             ],
         },]
-    }
+    },
 
+    devServer: {
+        contentBase: './build',
+        port: 7171,
+        historyApiFallback: true,
+      },
 
 }

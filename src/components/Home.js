@@ -16,7 +16,7 @@ class Home extends React.Component {
             <Sidebar></Sidebar>
             {
                 this.posts.map(post => {
-                    return (<Post title = {post.title} author = {post.author} content = {post.body}></Post>)
+                    return (<Post title = {post.title} author = {post.author} content = {post.body} url = {post.url}></Post>)
                 })
             }
             </div>
