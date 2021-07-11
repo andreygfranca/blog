@@ -10,7 +10,7 @@ class Body extends Component {
     render() {
         return (
             <div className="post__body">
-                <p dangerouslySetInnerHTML={{__html: this.props.content}}></p>
+                <p dangerouslySetInnerHTML={{ __html: this.props.content }}></p>
             </div>
         );
     }

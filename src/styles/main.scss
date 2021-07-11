@@ -1,5 +1,5 @@
 .main {
-    font-family: 'Bona Nova', serif;
+    font-family: "Bona Nova", serif;
 }
 
 .language-java {
@@ -7,17 +7,16 @@
 }
 
 code {
-    font-family: Consolas,"courier new";
+    font-family: Consolas, "courier new";
     color: crimson;
     background-color: #f1f1f1;
     padding: 2px;
     font-size: 80%;
-  }
+}
 
 .post {
     max-width: 800px;
     margin: auto;
-
 
     &__body {
         text-align: justify;
@@ -48,35 +47,30 @@ code {
 
 $aqua: #333;
 
-hr{
-  
+hr {
     border: 0;
     height: 1px;
     width: 10%;
     position: relative;
     margin: 30px auto;
-    
-    &.center-diamond{
 
-      background: $aqua;
-      
-      &:before{
-        content: "";
-        width: 6px;
-        height: 6px;
+    &.center-diamond {
         background: $aqua;
-        display: inline-block;
-        border: 2px solid $aqua;
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        margin: 0 0 0 -3px;
-        transform:rotate(45deg);
-        -ms-transform:rotate(45deg); /* IE 9 */
-        -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
-      }
+
+        &:before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: $aqua;
+            display: inline-block;
+            border: 2px solid $aqua;
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            margin: 0 0 0 -3px;
+            transform: rotate(45deg);
+            -ms-transform: rotate(45deg); /* IE 9 */
+            -webkit-transform: rotate(45deg); /* Opera, Chrome, and Safari */
+        }
     }
-
-  }
-  
-
+}

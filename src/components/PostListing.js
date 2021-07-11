@@ -1,6 +1,6 @@
 import React from 'react';
-import Post from './Post';
 import PostFile from '../posts/build/json/posts_db.json';
+import Post from './Post';
 
 class PostListing extends React.Component {
 
@@ -15,7 +15,7 @@ class PostListing extends React.Component {
                 {
                     this.posts.map(post => {
                         return (
-                            <div style={{marginBottom: 40}}>
+                            <div style={{ marginBottom: 40 }}>
                                 <Post
                                     title={post.title}
                                     author={post.author}
@@ -25,7 +25,7 @@ class PostListing extends React.Component {
                                     tags={post.tags}>
                                 </Post>
 
-                                <hr class="center-diamond"/>
+                                <hr class="center-diamond" />
                             </div>
                         )
                     })

@@ -1,5 +1,5 @@
+import { TagIcon } from '@primer/octicons-react';
 import React, { Component } from 'react';
-import { TagIcon } from '@primer/octicons-react'
 
 class Tags extends Component {
 

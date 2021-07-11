@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import PostListing from './PostListing';
-import Sidebar from './Sidebar';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
+import PostListing from './PostListing';
 import PostView from './PostView';
 
 class App extends Component {
     render() {
         return (
             <div className="home main">
-                {/* <Sidebar/> */}
-                <Navbar/>
+                <Navbar />
                 <BrowserRouter>
                     <Switch>
                         <Route path="/articles/:postId">
