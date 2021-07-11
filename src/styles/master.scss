@@ -1,13 +1,13 @@
-@import "./sidebar.scss";
-@import "./navbar.scss";
-@import "./main.scss";
+@import './sidebar.scss';
+@import './navbar.scss';
+@import './main.scss';
 
 $body-color: black;
 
 $font-stack: Helvetica, sans-serif;
 
 body {
-  font-family: "Bona Nova", serif;
+  font-family: 'Bona Nova', serif;
   font: 100% $font-stack;
   color: $body-color;
   margin: 0;
