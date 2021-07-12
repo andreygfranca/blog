@@ -1,82 +1,76 @@
 .main {
-    font-family: 'Bona Nova', serif;
+  font-family: 'Bona Nova', serif;
 }
 
 .language-java {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 code {
-    font-family: Consolas,"courier new";
-    color: crimson;
-    background-color: #f1f1f1;
-    padding: 2px;
-    font-size: 80%;
-  }
+  font-family: Consolas, 'courier new';
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 80%;
+}
 
 .post {
-    max-width: 800px;
-    margin: auto;
+  max-width: 800px;
+  margin: auto;
 
+  &__body {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 19px;
+  }
 
-    &__body {
-        text-align: justify;
-        line-height: 1.6;
-        font-size: 19px;
+  &__date {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__value {
+      font-size: 16px;
+      padding: 1px 8px;
     }
+  }
 
-    &__date {
-        display: flex;
-        flex-direction: row-reverse;
+  &__tag {
+    display: flex;
+    flex-direction: row;
 
-        &__value {
-            font-size: 16px;
-            padding: 1px 8px;
-        }
+    &__icon {
+      margin-right: 4px;
+      margin-left: 12px;
     }
-
-    &__tag {
-        display: flex;
-        flex-direction: row;
-
-        &__icon {
-            margin-right: 4px;
-            margin-left: 12px;
-        }
-    }
+  }
 }
 
 $aqua: #333;
 
-hr{
-  
-    border: 0;
-    height: 1px;
-    width: 10%;
-    position: relative;
-    margin: 30px auto;
-    
-    &.center-diamond{
+hr {
+  border: 0;
+  height: 1px;
+  width: 10%;
+  position: relative;
+  margin: 30px auto;
 
+  &.center-diamond {
+    background: $aqua;
+
+    &:before {
+      content: '';
+      width: 6px;
+      height: 6px;
       background: $aqua;
-      
-      &:before{
-        content: "";
-        width: 6px;
-        height: 6px;
-        background: $aqua;
-        display: inline-block;
-        border: 2px solid $aqua;
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        margin: 0 0 0 -3px;
-        transform:rotate(45deg);
-        -ms-transform:rotate(45deg); /* IE 9 */
-        -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
-      }
+      display: inline-block;
+      border: 2px solid $aqua;
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      margin: 0 0 0 -3px;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg); /* IE 9 */
+      -webkit-transform: rotate(45deg); /* Opera, Chrome, and Safari */
     }
-
   }
-  
-
+}

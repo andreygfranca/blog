@@ -1,22 +1,22 @@
 .topnav {
-    overflow: hidden;
-    background-color: #333;
-    height: 100px;
+  overflow: hidden;
+  background-color: #333;
+  height: 100px;
 
-    &__content {
-        font-weight: bold;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
+  &__content {
+    font-weight: bold;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
-  
+}
+
 .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
