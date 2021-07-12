@@ -16,7 +16,7 @@ gulp.task('markdown', async () => {
 gulp.task('combine', async () => {
   gulp
     .src('./src/posts/build/*.json')
-    .pipe(jsonConcat('posts_db.json', (data) => Buffer.alloc(JSON.stringify(data))))
+    .pipe(jsonConcat('posts_db.json', (data) => Buffer.from(JSON.stringify(data))))
     .pipe(gulp.dest('./src/posts/build/json'));
 });
 
