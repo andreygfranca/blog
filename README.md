@@ -1,6 +1,7 @@
 # Andrey's blog 🇧🇷
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/de349968-57c4-475b-b91c-25cccb35147b/deploy-status)](https://app.netlify.com/sites/agfranca/deploys)
+[![Node.js CI](https://github.com/andreygfranca/blog/actions/workflows/node.js.yml/badge.svg)](https://github.com/andreygfranca/blog/actions/workflows/node.js.yml)
 
 ---
 
