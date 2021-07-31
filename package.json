@@ -8,7 +8,7 @@
     "build_posts": "./node_modules/gulp/bin/gulp.js markdown && sleep 2 && ./node_modules/gulp/bin/gulp.js combine && sleep 2",
     "build": "npm run build_posts && ./node_modules/webpack/bin/webpack.js",
     "dev": "npm run build_posts && ./node_modules/webpack/bin/webpack.js --mode=development --watch",
-    "start": "npm run build && ./node_modules/webpack/bin/webpack.js --mode=development serve --open",
+    "start": "npm run build && ./node_modules/webpack/bin/webpack.js --mode=development serve",
     "lint": "./node_modules/.bin/eslint \"./src/components/**\""
   },
   "repository": {
