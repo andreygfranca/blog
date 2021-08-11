@@ -1,6 +1,6 @@
 ---
-title: Testando Aplicações Spring Boot com Spock Framework
-url: testando-aplicacoes-spring-boot-com-spock-framework
+title: Testando com Spock Framework
+url: testando-spock-framework
 author: Andrey Franca
 date: "2021-07-25"
 tags:
@@ -60,13 +60,13 @@ class MultiplierTest extends spock.lang.Specification {
 
     def "Should multiply two number"() {
         given:
-        Multiplier multiplier = new Multiplier(5, 5)
+            Multiplier multiplier = new Multiplier(5, 5)
 
         when:
-        def result = multiplier.multiply()
+            def result = multiplier.multiply()
 
         then:
-        result == 25
+            result == 25
     }
 }
 </code></pre>
@@ -89,9 +89,47 @@ Como mencionado a palavra chave `assert` não é obrigatória nos testes, pois o
 * Em outros blocos que não sejam `then` ou `expect`.
 
 ## Mocks e Stubs
-Algumas vezes não queremos, não precisamos ou não podemos confiar em determinadas dependências do nosso objeto em testes, por exemplo, podemos estar testando um componente que depende da resposta de uma requisição HTTP a outro serviço externo. Esse tipo de situação pode fazer o nosso testes falhar, pois o serviço externo pode estar fora do ar. Esse tipo de dependência deve ser evitada em testes e uma solução para este tipo de problema é utilizar *Mocks* (dublês) 
+Algumas vezes não queremos, não precisamos ou não podemos confiar em determinadas dependências do nosso objeto em testes, por exemplo, podemos estar testando um componente que depende da resposta de uma requisição HTTP a outro serviço externo, ou talvez o envio de emails, imagine enviar emails toda vez que o teste for executado. Esse tipo de situação pode fazer o nosso testes falhar, pois o serviço externo pode estar fora do ar. Esse tipo de dependência não-determinística deve ser evitada em testes e uma solução para este tipo de problema é utilizar *Mocks* (dublês), ou de forma mais geral Objetos *Fakes*.
+
+De forma geral existem dois tipos possíveis de objetos fakes:
+
+* *Stubs*: são classes fakes em que é possível pré-programar o retorno dos seus métodos, de forma a montar o cenário esperado ao interagir com determinado objeto.
+* *Mocks*: são classes fakes que além da possibilidade de pré-programar os retornos ainda é possível examinar a interações naquele objeto específico.
+
+De forma a escrever um teste limpo e conciso o primeiro passo é identificar as dependências do nosso objeto em testes, em seguida definir as dependências que serão stubs e mocks (em muitos projetos não existe essa diferenciação e todos são tratados como mocks). No trecho de código abaixo é apresentado um teste escrito para cobrir um cenário fictício de validar o serviço de compra para não permitir efetuar a compra quando não houver produtos disponíveis: 
+
+<pre><code class="language-java">
+    void setup() { // (1)
+        servicoEstoque = Stub(ServicoEstoque)
+        servicoFornecedor = Mock(ServicoFornecedor)
+        servicoCompra = new ServicoCompra(servicoEstoque, servicoFornecedor)
+    }
+
+    def "Nao deve adicionar produto na sacola quando nao estiver diponivel"() {
+        given:
+            Produto produto = new Produto(
+                    sku: '234', 
+                    valor: 45.5,
+                    nome: 'Pizza G'
+            )
+            Sacola sacola = new Sacola()
+            servicoEstoque.estaDisponivel(produto) >> false // (2)
+
+        when:
+            servicoCompra.comprar(sacola, produto)
+
+        then:
+            thrown(ProdutoNaoDisponivelException) // (3)
+            1 * servicoFornecedor.notificarProdutoNaoDisponivel() //(4)
+    }
+</code></pre>
 
 
+O método `setup()` em (1) é chamado automaticamente antes de cada teste rodar [[1]](https://spockframework.org/spock/docs/1.0/spock_primer.html#_fixture_methods). No apontamento (2) estamos indicando que o método `estaDisponivel` deve retornar false. Em (3) utilizamos um dos recursos do spock para verificar que uma exception foi lançada, já em (4) verificamos que o método `notificarProdutoNaoDisponivel` foi invocado 1 vez, para os usuário de Mockito é bem parecido com o método `verify()`.
+
+## Conclusão
+
+Neste artigo foi apresentado uma introdução sucinta ao spock, um framework que entrega várias features em um só pacote, essa característica aliada com as funcionalidades da linguagem Groovy faz com que seja possível a criação de testes concisos, legíveis e robustos de forma simples e rápida.
 
 <hr style="border-top: 1px solid gray; width:50%">
-¹ Existem outras técnicas parecidas com o BDD para organização e escritas de testes como por exemplo o [AAA](http://wiki.c2.com/?ArrangeActAssert) (*Arrange-Act-Assert*)  
+¹ Existem outras técnicas parecidas com o BDD para organização e escritas de testes como por exemplo o [AAA](http://wiki.c2.com/?ArrangeActAssert) (*Arrange-Act-Assert*),
