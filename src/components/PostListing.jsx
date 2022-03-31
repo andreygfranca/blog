@@ -3,9 +3,14 @@ import PostFile from '../posts/build/json/posts_db.json';
 import Post from './Post';
 
 class PostListing extends React.Component {
+
   constructor() {
     super();
-    this.posts = Object.values(PostFile);
+    this.posts = Object.values(PostFile).sort((a, b) => {
+      if (Date.parse(a.date) > Date.parse(b.date)) return -1;
+      if (Date.parse(a.date) < Date.parse(b.date)) return 1;
+      return 0;
+    });
   }
 
   render() {
